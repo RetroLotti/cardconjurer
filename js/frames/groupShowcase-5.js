@@ -1,5 +1,6 @@
 loadFramePacks([
 	{name:'Set Showcase Frames (Chronological)', value:'disabled'},
+	{name:'The Brothers\' War Retro Artifact (BRR)', value:'BRRRetroArtifact'},
 	{name:'Stained Glass (DMU)', value:'DMUStainedGlass'},
 	{name:'Golden Age (SNC)', value:'SNCGilded'},
 	{name:'Art Deco (SNC)', value:'SNCArtDeco'},
