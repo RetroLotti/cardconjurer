@@ -1,5 +1,6 @@
 loadFramePacks([
 	{name:'Set Showcase Frames (Chronological)', value:'disabled'},
+    {name:'The Brothers\' War Retro Artifact (BRR)', value:'BRRRetroArtifact'},
 	{name:'Ring (LTR)', value:'Ring'},
 	{name:'Ixalan Coin (MOM)', value:'IxalanCoin'},
 	{name:'Tarkir Sketch (MOM)', value:'Tarkir'},
