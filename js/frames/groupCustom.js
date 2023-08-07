@@ -7,6 +7,7 @@ loadFramePacks([
 	{name:'Textless Seventh', value:'SeventhTextless'},
 	{name:'Seventh Edition Planeswalkers', value:'PlaneswalkerSeventh'},
 	{name:'Seventh Edition Sagas', value:'OldSaga'},
+	{name:'Seventh Edition Snow Lands', value:'SeventhSnowLands'},
 	{name:'Floating Old Border', value:'OldFloating'},
 	{name:'Floating Old Border (Short)', value:'OldFloatingShort'},
 	{name:'Classicshifted Series', value:'disabled'},
@@ -35,5 +36,6 @@ loadFramePacks([
 	{name:'Kaldheim, Fullart - @feuer_ameise', value:'FeuerAmeiseKaldheim'},
 	{name:'Celid\'s Asap', value:'CustomCelidAsap'},
 	{name:'Magrao\'s Kaldheim', value:'CustomMagraoKaldheim'},
-	{name:'Pokemon', value:'Pokemon'}
+	{name:'Pokemon', value:'Pokemon'},
+	{name:'Circuit', value:'Circuit'}
 ])
