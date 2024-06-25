@@ -124,15 +124,15 @@
 									-->
 									<option disabled>Special Frames</option>
 									<option value='Showcase-5'>Showcase Frames</option>
-									<!--
-									<option disabled value='Promo-2'>Promos (Tall Art)</option>
-									<option disabled value='Textless-4'>Textless/Fullart</option>
-									-->
+									<option value='UniversesBeyond'>Universes Beyond</option>
+									<option value='Promo-2'>Promos (Tall Art)</option>
+									<option value='Textless-4'>Textless/Fullart</option>
 									<option disabled>Other Frames</option>
 									<!--
 									<option disabled value='Custom'>Custom</option>
 									-->
 									<option value='Misc-2'>Old/Misc</option>
+									<option value='Accurate'>Accurate Frames</option>
 									<option value='Margin'>1/8th Inch Margin</option>
 									<!--
 									<option disabled>Other Games</option>
@@ -338,6 +338,13 @@
 							</div>
 						</div>
 						<div class='readable-background padding margin-bottom'>
+							<h5 class='input-description margin-bottom'>Make the art grayscale</h5>
+							<label class='checkbox-container input'>Grayscale
+								<input id='grayscale-art' type='checkbox' onchange='drawCard();'>
+								<span class='checkmark'></span>
+							</label>
+						</div>
+						<div class='readable-background padding margin-bottom'>
 							<h5 class='padding margin-bottom input-description'>Clears the art, making it blank</h5>
 							<button class='input margin-bottom' onclick='uploadArt(blank.src);'>Remove Art</button>
 						</div>
@@ -366,10 +373,14 @@
 								<input id='set-symbol-code' type='text' placeholder='Set Code' class='input' onchange='fetchSetSymbol();'>
 								<input id='set-symbol-rarity' type='text' placeholder='Rarity' class='input' onchange='fetchSetSymbol();'>
 							</div>
-							<label class='checkbox-container input margin-bottom'>Fetch from Gatherer
-								<input id='fetchSetSymbolFromGatherer' type='checkbox' checked onchange='fetchSetSymbol();'>
-								<span class='checkmark'></span>
-							</label>
+							<h5 class='margin-bottom padding input-description'>Load set symbols from:</h5>
+							<div class='input-grid margin-bottom'>
+								<select id='set-symbol-source' class='input' onchange='fetchSetSymbol();'>
+									<option value='cardconjurer'>CardConjurer</option>
+									<option value='gatherer'>Gatherer</option>
+									<option value='hexproof'>Hexproof.io</option>
+								</select>
+							</div>
 							<h5 class='collapsible collapsed padding input-description' onclick='toggleCollapse(event);'>
 								How to find set codes
 							</h5>
@@ -426,6 +437,7 @@
 								<option disabled selected='selected'>None</option>
 								<option disabled>General</option>
 								<option value="/img/watermarks/planeswalker.svg">Planeswalker</option>
+								<option value="/img/watermarks/desparked-planeswalker.svg">Desparked Planeswalker</option>
 								<option value="/img/watermarks/misc-star.svg">DCI Star</option>
 								<option value="/img/watermarks/misc-dci.svg">DCI Logo</option>
 								<option disabled>Monocolors</option>
@@ -568,7 +580,7 @@
 								<input id='info-language' type='text' class='input' oninput='bottomInfoEdited();' placeholder='Language' value='EN'>
 								<input id='info-artist' type='text' class='input' oninput='artistEdited(this.value);' placeholder='Artist'>
 							</div>
-							<div cl<!-- ass='padding input-grid'>
+							<div class='padding input-grid'>
 								<input id='info-year' type='number' class='input' oninput='bottomInfoEdited();' placeholder='0' value='1993'>
 							</div>
 						</div>
@@ -593,6 +605,25 @@
 								<span class='checkmark'></span>
 							</label>
 						</div>
+
+						<div class='readable-background padding margin-bottom'>
+							<h5 class='padding input-description'>Serial Number (leave both blank to hide)</h5>
+							<div class='padding input-grid'>
+								<input id='serial-number' type='number' class='input' oninput='serialInfoEdited();' placeholder='001' min='0' value=''>
+								<input id='serial-total' type='number' class='input' oninput='serialInfoEdited();' placeholder='500' min='0' value=''>
+							</div>
+
+							<h5 class='padding input-description'>Placement (X, Y, Scale)</h5>
+							<div class='padding input-grid'>
+								<input id='serial-x' type='number' class='input' oninput='serialInfoEdited();' min='0' value='172'>
+								<input id='serial-y' type='number' class='input' oninput='serialInfoEdited();' min='0' value='1383'>
+								<input id='serial-scale' type='number' class='input' oninput='serialInfoEdited();' min='0' step='0.01' value='1'>
+							</div>
+							<div class='padding input-grid'>
+								<button class='input' onclick='resetSerial();'>Reset Serial Number Placement</button>
+							</div>
+						</div>
+
 						<div class='readable-background padding margin-bottom'>
 							<h5 class='input-description padding margin-bottom'>Toggle between star (seen on foils) and dot (seen on regular cards)</h5>
 							<div class='padding'>
@@ -693,6 +724,11 @@
 							<option value="Praetors">Phyrexian</option>
 							<option value="8th">8th Edition</option>
 							<option value="Seventh">Seventh Edition</option>
+
+							<option disabled>Redone frames</option>
+							<option value="M15RegularNew">Regular (Accurate)</option>
+							<option value="FullArtNew">Full art (Accurate)</option>
+							<option value="UBNew">Universes Beyond (Accurate)</option>
 
 							<option disabled>Custom frames</option>
 							<option value="Circuit">Circuit</option>

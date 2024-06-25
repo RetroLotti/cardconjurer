@@ -1,6 +1,12 @@
 loadFramePacks([
 	{name:'Set Showcase Frames (Chronological)', value:'disabled'},
-    {name:'The Brothers\' War Retro Artifact (BRR)', value:'BRRRetroArtifact'},
+	{name:'Breaking News (OTP)', value:'BreakingNews'},
+	{name:'Vault (BIG)', value:'Vault'},
+	{name:'Wanted Poster (OTJ)', value:'Wanted'},
+	{name:'Pip-Boy (PIP)', value:'Pipboy'},
+	{name:'Dossier (MKM)', value:'Dossier'},
+	{name:'Scrolls of Middle-earth (LTR)', value:'Scroll'},
+  {name:'The Brothers\' War Retro Artifact (BRR)', value:'BRRRetroArtifact'},
 	{name:'Enchanting Tales (WOT)', value:'EnchantingTales'},
 	{name:'TARDIS (WHO)', value:'TARDIS'},
 	{name:'Ring (LTR)', value:'Ring'},
@@ -85,4 +91,3 @@ loadFramePacks([
 
 	{name:'Custom Addons', value:'disabled'},
 	{name:'Brawl Legend Crowns', value:'Brawl'}
-])

@@ -1,5 +1,5 @@
 //Create objects for common properties across available frames
-var bounds = {x:-0.044, y:-1/35, width:1.088, height:37/35};
+var bounds = {x:-0.044, y:-1/35, width:2186/2010, height:2974/2814};
 var ogBounds = {x:0, y:0, width:1, height:1};
 //defines available frames
 availableFrames = [
@@ -8,6 +8,7 @@ availableFrames = [
 	{name:'Black Extension', src:'/img/frames/enchantingTales/margin/b.png', bounds:bounds, ogBounds:ogBounds},
 	{name:'Red Extension', src:'/img/frames/enchantingTales/margin/r.png', bounds:bounds, ogBounds:ogBounds},
 	{name:'Green Extension', src:'/img/frames/enchantingTales/margin/g.png', bounds:bounds, ogBounds:ogBounds},
+	{name:'Multicolored Extension', src:'/img/frames/enchantingTales/margin/m.png', bounds:bounds, ogBounds:ogBounds},
 ];
 //disables/enables the "Load Frame Version" button
 document.querySelector('#loadFrameVersion').disabled = false;
